@@ -1,0 +1,35 @@
+@import "src/variables";
+
+.vertical-banner-left {
+    position: fixed;
+    bottom: 14vh;
+    left: 10px;
+    transition: all 1s cubic-bezier(.68,-.55,.27,1.55);
+    z-index: 100;
+}
+
+.vertical-banner-left-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    cursor: pointer;
+    list-style: none;
+    padding: 0;
+}
+
+.vertical-banner-left-icons li {
+    margin-bottom: 10px;
+}
+
+.vertical-banner-left-icons li img {
+    opacity: .8;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+}
+
+.vertical-banner-left-icons li a:hover img {
+    transform: translateX(16px); 
+}
+
+
+

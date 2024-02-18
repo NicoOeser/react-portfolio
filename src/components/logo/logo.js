@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './logo.scss'; 
 
+
 function Logo() {
   useEffect(() => {
     const h1Timer = setTimeout(() => {
