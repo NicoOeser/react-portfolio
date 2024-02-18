@@ -1,3 +1,5 @@
+@import "src/variables";
+
 .logo__container {
   display: flex;
   justify-content: center;
@@ -7,13 +9,13 @@
 
 .logo-wrapper {
   display: flex;
-  align-items: center; /* Vertikal zentriert */
+  align-items: center;
 }
 
 .logo-text {
   font-size: 72px;
   font-weight: 500;
-  background-image: linear-gradient(to right, #0062E6, #64FFDA);
+  background-image: linear-gradient(to right, $primary-logo-color, $secondary-logo-color);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -56,10 +58,6 @@
     opacity: 1;
   }
 }
-
-
-
-
 
 
 .logo-text::before,

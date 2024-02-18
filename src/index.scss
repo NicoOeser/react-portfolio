@@ -1,13 +1,48 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'Syne';
+  src: url('assets/fonts/syne/static/Syne-ExtraBold.ttf');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'Overpass';
+  src: url('assets/fonts/overpass/static/Overpass-Regular.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Overpass', sans-serif;
+  background-color: #121212;
+  color: rgba(255, 255, 255);
+}
+
+h1 {
+  font-family: 'Syne', sans-serif;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #64ffda;
+}
+
+*::-webkit-scrollbar-corner {
+  background-color: transparent;
 }

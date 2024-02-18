@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
-import './logo.scss'; // Importiere die logo.scss-Datei
+import './logo.scss'; 
 
 function Logo() {
   useEffect(() => {
     const h1Timer = setTimeout(() => {
-      // Hier kann weitere Logik hinzugefügt werden, falls erforderlich
     }, 500);
 
     return () => {
