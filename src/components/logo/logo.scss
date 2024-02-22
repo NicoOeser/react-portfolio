@@ -5,22 +5,41 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
 
-.logo-wrapper {
-  display: flex;
-  align-items: center;
-}
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
 
-.logo-text {
-  font-size: 144px;
-  font-weight: 500;
-  background-image: linear-gradient(to right, $primary-logo-color, $secondary-logo-color);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  opacity: 1;
-  animation: fadeOut 3s forwards;
+    .logo-text {
+      font-size: 144px;
+      font-weight: 500;
+      background-image: linear-gradient(to right, $primary-logo-color, $secondary-logo-color);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      opacity: 1;
+      animation: fadeOut 3s forwards;
+      display: flex;
+      align-items: center;
+
+      &::before,
+      &::after {
+        content: ' ';
+      }
+
+      &::before {
+        content: '{';
+        margin-right: 0.2rem;
+        margin-bottom: 1.2rem;
+      }
+
+      &::after {
+        content: '}';
+        margin-left: 0.2rem;
+        margin-bottom: 1.2rem;
+      }
+    }
+  }
 }
 
 @keyframes fadeOut {
@@ -58,20 +77,3 @@
     opacity: 1;
   }
 }
-
-
-.logo-text::before,
-.logo-text::after {
-  content: ' ';
-}
-
-.logo-text::before {
-  content: '{';
-  margin-right: 0.2rem;
-}
-
-.logo-text::after {
-  content: '}';
-  margin-left: 0.2rem;
-}
-
