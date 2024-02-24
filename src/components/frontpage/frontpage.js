@@ -1,8 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import './frontpage.scss';
+import OverlayContact from '../overlay-contact/overlay-contact';
+
 
 function Frontpage() {
   const [text, setText] = useState([]);
+  const [overlayVisible, setOverlayVisible] = useState(false);
+
+  const toggleOverlay = () => {
+    setOverlayVisible(!overlayVisible);
+  };
+
+  const handleCloseOverlay = () => {
+    setOverlayVisible(false);
+  };
 
   function formatTextWithColors(text) {
     const colorMap = {
@@ -68,10 +79,9 @@ function Frontpage() {
     return () => clearInterval(interval);
   }, [codeText]);
 
-  
-
   return (
     <main className="content">
+       {overlayVisible && <OverlayContact onClose={handleCloseOverlay} />}
       <div className="section section-intro reveal">
         <article>
           <div className="intro-wrapper" translate="yes">
@@ -82,7 +92,9 @@ function Frontpage() {
               I am a German-speaking front-end web developer with a passion for creating efficient websites and web applications using core technologies such as HTML5, CSS3 and JavaScript.
             </p>
             <div className="say-hi-container">
-              <button className="say-hi-btn">Say hi!</button>
+              <button className="say-hi-btn" onClick={toggleOverlay}>
+                Say hi!
+              </button>
             </div>
           </div>
           <aside>
@@ -120,6 +132,7 @@ function Frontpage() {
           </aside>
         </article>
       </div>
+     
     </main>
   );
 }

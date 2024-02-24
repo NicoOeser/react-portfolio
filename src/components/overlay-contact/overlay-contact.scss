@@ -1,0 +1,199 @@
+@import "src/variables";
+
+.overlay-active {
+  background-color: #0000004d;
+  backdrop-filter: blur(6px);
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity .2s ease-in, backdrop-filter .2s ease-in, background-color .2s ease-in;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+  overflow: hidden;
+  transition: height 0.3s ease;
+
+  .code-overlay-modal {
+    background-color: $background-lighter-color;
+    border-radius: 4px;
+    line-break: auto;
+    user-select: none;
+    border: solid 1px $codeBorderColor;
+    box-shadow: $shadow;
+    height: clamp(28em, 80vh, 36em);
+    transition: all .4s cubic-bezier(.68, -.55, .27, 1.55);
+  }
+
+  .code-overlay-modal-active {
+    transform: none;
+    opacity: 1;
+  }
+
+  .code-overlay-modal-contact {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-weight: bold;
+
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+.code-bar {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background-color: $background-lightest-color;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom: solid 1px $codeDotContainerBottomBorderColor;
+
+  .code-bar-dots-container {
+    display: flex;
+    gap: 10px;
+    height: 100%;
+    align-items: center;
+    padding: 12px;
+    background-color: $codeWindow;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+
+    .code-bar-dots {
+      height: 12px;
+      width: 12px;
+      border-radius: 50%;
+    }
+
+    .red-dot {
+      background-color: #fd5e59;
+    }
+
+    .yellow-dot {
+      background-color: #ffbb3b;
+    }
+
+    .green-dot {
+      background-color: #34c748;
+    }
+  }
+}
+
+.contact-me-form {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  padding: 14px;
+  gap: 14px;
+  overflow-x: hidden;
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  &-text .form-h3 {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: $accent-color;
+    align-self: start;
+  }
+
+  &-text .form-text {
+    font-size: 1em;
+  }
+}
+
+.contact-me-form-input {
+  width: 100%;
+  padding: 10px;
+  font: inherit;
+  background-color: transparent;
+  color: inherit;
+  outline: none;
+  border: solid 1px $accent-color;
+  border-radius: 4px;
+  height: 36px;
+}
+
+.contact-me-form-input.bad-input{
+  animation: shake .3s ease;
+  border-color: $error-color;
+  transition: border-color .3s ease;
+}
+
+.contact-me-form-message {
+  height: 100%;
+  min-height: 2em;
+  resize: none;
+}
+
+.form-btn-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  .form-btn {
+    transition: transform .1s ease;
+    height: fit-content;
+    width: fit-content;
+    font-family: inherit;
+    font-size: 1rem;
+    border: solid 1px $accent-color;
+    background-color: transparent;
+    color: $accent-color;
+    border-radius: 4px;
+    transition: all .12s ease;
+    padding: 10px 16px;
+    background-color: $accent-color;
+    height: 2.2em;
+    overflow: hidden;
+    justify-self: end;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+  }
+
+  .form-btn-status-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 4em;
+  }
+
+  .form-btn p {
+    color: $callToActionAccentColor;
+  }
+
+  .contact-me-form p {
+    font-size: 1em;
+  }
+
+  .form-btn-submit-text {
+    position: absolute;
+    transition: all .2s ease;
+  }
+
+  .form-btn-submit-text-sent {
+    color: $error-color;
+  }
+}
