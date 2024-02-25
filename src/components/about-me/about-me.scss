@@ -1,0 +1,103 @@
+@import "src/variables";
+
+.section-2:before,
+.section-2:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: $diagonalColor;
+    z-index: -10;
+}
+
+.section-2:before {
+    top: 0;
+    bottom: 20%;
+    clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 100%);
+}
+
+.section-2:after {
+    bottom: 0;
+    top: 40%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+}
+
+
+.section {
+    position: relative;
+    opacity: 0;
+    transition: transform .8s ease-out, opacity .8s ease .2s;
+    transform: translateY(10%);
+
+    &-2 {
+        padding-left: 10vw;
+        padding-right: 10vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10vw;
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+
+    &.reveal {
+        opacity: 1;
+        transform: unset;
+    }
+}
+
+.section-2 .me {
+    display: none;
+}
+
+.section-2 img {
+    position: absolute;
+    transform: translate(-120px, -50px);
+    height: auto; 
+    max-height: 300px;// Stellen Sie sicher, dass das Bild die Höhe der Elternkomponente ausfüllt
+    width: 300px; // Stellen Sie sicher, dass das Bild die Breite der Elternkomponente ausfüllt
+    object-fit:fill; 
+    box-shadow: $shadow;
+    border-radius: 15px;
+    z-index: 300;
+}
+
+
+
+.aritcle-about-me {
+    grid-column: 2 / -1;
+    justify-self: end;
+    padding: 32px;
+    width: 100%;
+    max-width: 700px;
+    border-radius: 15px;
+    box-shadow: $shadow;
+    background-color: $lighterAccentColor;
+    gap: 42px;
+    transform: translate(clamp(80px, 10vw, 120px));
+}
+
+.about-me {
+    display: grid;
+    grid-template-columns: .1fr 1fr;
+    gap: 14px;
+}
+
+.about-me-text {
+    grid-column: 2 / -1;
+    display: flex;
+    gap: 14px;
+    flex-direction: column;
+}
+
+.about-me h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: $aboutMeColor;
+}
+
+.about-me p {
+    color: $text-color-high-emphasis;
+    font-size: 1.2rem;
+    font-family: 'Overpass', sans-serif;
+}
