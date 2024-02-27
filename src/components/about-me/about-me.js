@@ -1,12 +1,39 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './about-me.scss';
 import Me from '../../assets/me.png';
 
 function AboutMe() {
+  const [isVisible, setIsVisible] = useState(false);
+  const aboutMeRef = useRef(null);
+
+  useEffect(() => {
+    const currentRef = aboutMeRef.current; // Variable zur Erfassung des aktuellen Werts des Refs
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(currentRef); // Verwenden der Variable für den aktuellen Ref-Wert
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   return (
     <div id='about-me' className="section section-2 reveal">
-      <div className='about-me-wrapper'>
-        <img className='me img-placeholder' src={Me} alt='Nicolas Oeser' style={{ display: 'unset' }} />
+      <div ref={aboutMeRef} className={`about-me-wrapper ${isVisible ? 'fade-in' : ''}`}>
+        <img className='me me-img' src={Me} alt='Nicolas Oeser' style={{ display: 'unset' }} />
         <article className='aritcle-about-me'>
           <div className='about-me'>
             <div className='about-me-text' translate='yes'>

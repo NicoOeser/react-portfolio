@@ -74,14 +74,14 @@ function Frontpage() {
       } else {
         clearInterval(interval);
       }
-    }, 50); // Adjust typing speed as needed
+    }, 30);
 
     return () => clearInterval(interval);
   }, [codeText]);
 
   return (
     <main className="content">
-       {overlayVisible && <OverlayContact onClose={handleCloseOverlay} />}
+      {overlayVisible && <OverlayContact onClose={handleCloseOverlay} />}
       <div className="section section-intro reveal">
         <article>
           <div className="intro-wrapper" translate="yes">
@@ -132,7 +132,6 @@ function Frontpage() {
           </aside>
         </article>
       </div>
-     
     </main>
   );
 }

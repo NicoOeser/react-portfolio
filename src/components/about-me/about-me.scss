@@ -22,7 +22,6 @@
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
 }
 
-
 .section {
     position: relative;
     opacity: 0;
@@ -44,25 +43,36 @@
         opacity: 1;
         transform: unset;
     }
+
+    &-2 .me {
+        display: none;
+    }
+
+    .me-img {
+        position: absolute;
+        transform: translate(-120px, -50px);
+        height: auto; 
+        max-height: 300px;
+        width: 300px;
+        object-fit: fill; 
+        box-shadow: $shadow;
+        border-radius: 15px;
+        z-index: 300;
+
+        .section-2 & {
+            display: block;
+        }
+    }
+
+    .about-me-wrapper {
+        opacity: 0; 
+        transition: opacity 2s ease; 
+
+        &.fade-in {
+            opacity: 1; 
+        }
+    }
 }
-
-.section-2 .me {
-    display: none;
-}
-
-.section-2 img {
-    position: absolute;
-    transform: translate(-120px, -50px);
-    height: auto; 
-    max-height: 300px;// Stellen Sie sicher, dass das Bild die Höhe der Elternkomponente ausfüllt
-    width: 300px; // Stellen Sie sicher, dass das Bild die Breite der Elternkomponente ausfüllt
-    object-fit:fill; 
-    box-shadow: $shadow;
-    border-radius: 15px;
-    z-index: 300;
-}
-
-
 
 .aritcle-about-me {
     grid-column: 2 / -1;
