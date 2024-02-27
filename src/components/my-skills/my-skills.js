@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './my-skills.scss';
 import angular from '../../assets/icons/angular-icon.svg';
 import firebase from '../../assets/icons/firebase-icon.svg';
@@ -14,6 +14,25 @@ import api from '../../assets/icons/api-icon.svg';
 import css from '../../assets/icons/css-icon.svg';
 
 function MySkills() {
+  useEffect(() => {
+    const skillsSection = document.getElementById('skills');
+    const skillsWrapper = document.querySelector('.skills-crad-wrapper');
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          skillsWrapper.classList.add('reveal');
+        }
+      });
+    });
+
+    sectionObserver.observe(skillsSection);
+
+    return () => {
+      sectionObserver.unobserve(skillsSection);
+    };
+  }, []);
+
   return (
     <div id='skills' className="section section-3 reveal">
       <article className='article-skills' translate='yes'>
