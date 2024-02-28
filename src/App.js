@@ -1,21 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import Logo from './components/logo/logo';
-import Content from './components/content/content'; // sicherstellen, dass Content korrekt importiert wird
+import Header from './components/header/header'; 
+import Content from './components/content/content';
 
 function App() {
   const [showLogo, setShowLogo] = useState(true);
+  const [showHeader, setShowHeader] = useState(false);
+  const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowLogo(false);
-    }, 3000); // Verzögerung von 3 Sekunden
+      setShowHeader(true);
+      setShowContent(true); // Header anzeigen, wenn das Logo verschwunden ist
+    }, 3000); 
     
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className="app-container">
-      {showLogo ? <Logo /> : <Content />}
+      {showLogo ? <Logo /> : null}
+      {showHeader ? <Header /> : null} 
+      {showContent ? <Content /> : null} 
     </div>
   );
 }

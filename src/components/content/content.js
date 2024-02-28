@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../header/header';
 import Frontpage from '../frontpage/frontpage';
 import VerticalBanner from '../vertical-banner/vertical-banner';
 import AboutMe from '../about-me/about-me';
@@ -10,7 +9,6 @@ import Footer from '../footer/footer';
 function Content() {
   return (
     <div className="content-container">
-      <Header />
       <VerticalBanner />
       <Frontpage />
       <AboutMe />

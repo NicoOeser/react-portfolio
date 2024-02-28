@@ -1,9 +1,10 @@
 import React from 'react';
-import Imprint from '../imprint/imprint'; // Annahme: Imprint befindet sich in einer separaten Datei
+import './footer.scss';
+import Imprint from '../imprint/imprint'; 
 
 function Footer() {
   return (
-    <div className="footer-container">
+    <div className="section section-footer reveal">
       <div>Footer Content</div>
       <div>
         <Imprint />

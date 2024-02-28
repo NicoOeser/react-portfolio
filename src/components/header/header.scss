@@ -1,6 +1,8 @@
 @import "src/variables";
 
 .header {
+  position: sticky;
+  z-index: 1000;
   display: flex;
   top: 0;
   padding: 10px 20px 10px 10px;
@@ -9,7 +11,8 @@
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  position: relative;
+  background-color: $background-color-transparent;
+
 
   &-logo {
     justify-content: center;

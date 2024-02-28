@@ -17,7 +17,6 @@ function MySkills() {
   useEffect(() => {
     const skillsSection = document.getElementById('skills');
     const skillsWrapper = document.querySelector('.skills-crad-wrapper');
-
     const sectionObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -34,7 +33,7 @@ function MySkills() {
   }, []);
 
   return (
-    <div id='skills' className="section section-3 reveal">
+    <div id='skills' className="section section-skills reveal">
       <article className='article-skills' translate='yes'>
         <h2>My Skills</h2>
         <p>The following skills are part of my toolbox. One of the things I love is learning and trying new technologies</p>

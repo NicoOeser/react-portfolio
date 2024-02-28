@@ -2,7 +2,6 @@
 
 
 main {
-  width: 99vw;
   padding-top: 200px;
   overflow: hidden;
   margin: 0 auto;
@@ -14,7 +13,7 @@ main {
     transition: transform .8s ease-out, opacity .8s ease .2s;
     transform: translateY(10%);
 
-    &-intro {
+    &-frontpage {
       padding-left: 10vw;
       padding-right: 10vw;
       padding-bottom: 250px;
@@ -110,6 +109,7 @@ main {
     transition: all 0.12s ease;
 
     &:hover {
+      transform: scale(1.1); 
       background-color: $accent-color-transparent;
     }
   }

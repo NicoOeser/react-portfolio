@@ -7,13 +7,13 @@ function AboutMe() {
   const aboutMeRef = useRef(null);
 
   useEffect(() => {
-    const currentRef = aboutMeRef.current; // Variable zur Erfassung des aktuellen Werts des Refs
+    const currentRef = aboutMeRef.current; 
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.unobserve(currentRef); // Verwenden der Variable für den aktuellen Ref-Wert
+          observer.unobserve(currentRef); 
         }
       },
       { threshold: 0.5 }
@@ -28,10 +28,10 @@ function AboutMe() {
         observer.unobserve(currentRef);
       }
     };
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
-    <div id='about-me' className="section section-2 reveal">
+    <div id='about-me' className="section section-about-me reveal">
       <div ref={aboutMeRef} className={`about-me-wrapper ${isVisible ? 'fade-in' : ''}`}>
         <img className='me me-img' src={Me} alt='Nicolas Oeser' style={{ display: 'unset' }} />
         <article className='aritcle-about-me'>

@@ -82,7 +82,7 @@ function Frontpage() {
   return (
     <main className="content">
       {overlayVisible && <OverlayContact onClose={handleCloseOverlay} />}
-      <div className="section section-intro reveal">
+      <div className="section section-frontpage reveal">
         <article>
           <div className="intro-wrapper" translate="yes">
             <div className="intro-overlay"></div>

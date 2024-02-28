@@ -6,10 +6,9 @@
     transition: transform .8s ease-out, opacity .8s ease .2s;
     transform: translateY(10%);
 
-    &-3 {
+    &-skills {
         padding-left: 10vw;
         padding-right: 10vw;
-        width: 100vw;
         display: flex;
         flex-direction: column;
         gap: 100px;
@@ -23,41 +22,40 @@
         opacity: 1;
         transform: unset;
     }
-}
 
-.article-skills {
-    width: fit-content;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-}
+    .article-skills {
+        width: fit-content;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
 
-.article-skills h2 {
-    color: $accent-color;
-    font-weight: 500;
-    font-size: 2rem;
-}
+        h2 {
+            color: $accent-color;
+            font-weight: 500;
+            font-size: 2rem;
+        }
 
-.article-skills p {
-    display: block;
-    font-weight: 200;
-    font-size: 1.2rem;
-}
+        p {
+            display: block;
+            font-weight: 200;
+            font-size: 1.2rem;
+        }
 
-.article-skills a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    transition: all .1s ease;
-    color: $accent-color;
+        a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            transition: all .1s ease;
+            color: $accent-color;
 
-    &:hover {
-        font-size: 1.3rem;
+            &:hover {
+                font-size: 1.3rem;
+            }
+        }
     }
 }
-
 
 .skills-crad-wrapper {
     display: grid;
@@ -113,11 +111,11 @@
 }
 
 .skills-crad:hover .skills-card-content {
-    transform: rotate(360deg); 
+    transform: rotate(360deg);
 }
 
 .skills-crad:hover .skills-card-description {
-    transform: rotate(360deg); 
+    transform: rotate(360deg);
 }
 
 .skills-crad.skills-card-angular:hover .skills-card-description h2 {
@@ -159,9 +157,11 @@
 .skills-crad.skills-card-restapi:hover .skills-card-description h2 {
     color: $restapi;
 }
+
 .skills-crad.skills-card-materialdesign:hover .skills-card-description h2 {
     color: $materialdesign;
 }
+
 .skills-crad.skills-card-vscode:hover .skills-card-description h2 {
     color: $vscode;
 }
