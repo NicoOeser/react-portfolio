@@ -3,7 +3,7 @@ import './vertical-banner.scss';
 import envelope from '../../assets/icons/envelope.svg';
 import github from '../../assets/icons/github.svg';
 import linkedin from '../../assets/icons/linkedin.svg';
-import phone from '../../assets/icons/phone-vibrate.svg';
+import call from '../../assets/icons/telephone-icon.svg';
 
 function VerticalBanner() {
   return (
@@ -26,7 +26,7 @@ function VerticalBanner() {
         </li>
         <li>
           <a href="tel:+49 162 6250849" target="_blank" rel="noopener noreferrer">
-            <img src={phone} alt="Phone Icon" />
+            <img src={call} alt="Phone Icon" />
           </a>
         </li>
       </ul>

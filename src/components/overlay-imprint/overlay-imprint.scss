@@ -1,11 +1,11 @@
 @import "src/variables";
 
-.overlay-info-active {
+.overlay-imprint-active {
   background-color: #0000004d;
   backdrop-filter: blur(6px);
 }
 
-.overlay-info {
+.overlay-imprint {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +19,7 @@
   overflow: hidden;
   transition: height 0.3s ease;
 
-  .code-overlay-info-modal {
+  .code-overlay-imprint-modal {
     background-color: $background-lighter-color;
     border-radius: 4px;
     line-break: auto;
@@ -29,18 +29,18 @@
     transition: all .4s cubic-bezier(.68, -.55, .27, 1.55);
   }
 
-  .code-overlay-info-modal-active {
+  .code-overlay-imprint-modal-active {
     transform: none;
     opacity: 1;
   }
 
-  .code-overlay-info-modal-contact {
+  .code-overlay-imprint-modal-contact {
     display: flex;
     flex-direction: column;
     width: 500px;
   }
 
-  .code-info-bar {
+  .code-imprint-bar {
     position: relative;
     width: 100%;
     height: 30px;
@@ -49,7 +49,7 @@
     border-top-left-radius: 4px;
     border-bottom: solid 1px $codeDotContainerBottomBorderColor;
 
-    .code-info-bar-dots-container {
+    .code-imprint-bar-dots-container {
       display: flex;
       gap: 10px;
       height: 100%;
@@ -59,7 +59,7 @@
       border-top-left-radius: 4px;
       border-top-right-radius: 4px;
 
-      .code-info-bar-dots {
+      .code-imprint-bar-dots {
         height: 12px;
         width: 12px;
         border-radius: 50%;
@@ -78,7 +78,7 @@
       }
     }
 
-    .close-info-btn {
+    .close-imprint-btn {
       position: absolute;
       right: 10px;
       top: 50%;
@@ -92,14 +92,14 @@
     }
   }
 
-  .info-content {
+  .imprint-content {
     overflow: auto;
     user-select: none;
     width: 100%;
     height: 100%;
 
 
-    .info-content-wrapper {
+    .imprint-content-wrapper {
       padding: 24px;
       display: flex;
       flex-direction: column;
@@ -124,16 +124,12 @@
         font-size: 0.7em;
       }
 
-      .info-content-items {
+      .imprint-content-items {
         border: solid 2px $oddSiblingColor;
         border-radius: 4px;
         user-select: text;
 
-        .info-content-item:nth-child(even) {
-          background-color: $oddSiblingColor;
-        }
-
-        .info-content-item {
+        .imprint-content-item {
           display: flex;
           flex-direction: column;
           gap: 16px;

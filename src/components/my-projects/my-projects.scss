@@ -1,7 +1,7 @@
 @import "src/variables";
 
-.section-4:before,
-.section-4:after {
+.section-projects:before,
+.section-projects:after {
     content: "";
     position: absolute;
     left: 0;
@@ -10,13 +10,13 @@
     z-index: -10;
 }
 
-.section-4:before {
+.section-projects:before {
     top: 0;
     bottom: 20%;
     clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 100%);
 }
 
-.section-4:after {
+.section-projects:after {
     bottom: 0;
     top: 40%;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);

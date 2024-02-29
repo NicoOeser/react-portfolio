@@ -4,19 +4,23 @@ import OverlayInfo from '../overlay-info/overlay-info';
 
 function Header() {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [overlayVisible, setOverlayVisible] = useState(false);
+  const [infoOverlayVisible, setInfoOverlayVisible] = useState(false);
 
   const handleModeToggle = () => {
     setIsDarkMode(!isDarkMode);
   };
 
-  const toggleOverlayVisibility = () => {
-    setOverlayVisible(!overlayVisible);
+  const toggleInfoOverlay = () => {
+    setInfoOverlayVisible(!infoOverlayVisible);
+  };
+
+  const handleCloseOverlay = () => {
+    setInfoOverlayVisible(false);
   };
 
   return (
     <header className="header">
-      <div className="header-logo">
+      <div className="header-logo" translate='no'>
         <span className="header-logo-text">NO</span>
       </div>
       <nav className="nav-links">
@@ -24,7 +28,7 @@ function Header() {
           <li><a href="#about-me">About me</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact" onClick={toggleOverlayVisibility}>Contact Info</a></li>
+          <li><a href="#contact" onClick={toggleInfoOverlay}>Contact Info</a></li>
         </ul>
       </nav>
       <div className="mode-switcher">
@@ -34,7 +38,7 @@ function Header() {
           <span className="slider round"></span>
         </label>
       </div>
-      {overlayVisible && <OverlayInfo onClose={toggleOverlayVisibility} />}
+      {infoOverlayVisible && <OverlayInfo onClose={handleCloseOverlay} />}
     </header>
   );
 }

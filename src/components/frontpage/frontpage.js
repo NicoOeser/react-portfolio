@@ -98,7 +98,7 @@ function Frontpage() {
             </div>
           </div>
           <aside>
-            <div className='code-art-container-back'>
+            <div className='code-art-container-back' translate='no'>
               <div className='code-bar'>
                 <div className='code-bar-dots-container'>
                   <div className='code-bar-dots inactive-dot'></div>
@@ -117,7 +117,7 @@ function Frontpage() {
                 </div>
               </div>
             </div>
-            <div className='code-art-container-front'>
+            <div className='code-art-container-front' translate='no'>
               <div className='code-bar'>
                 <div className='code-bar-dots-container'>
                   <div className='code-bar-dots red-dot'></div>

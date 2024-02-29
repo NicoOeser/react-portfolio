@@ -22,7 +22,7 @@ function MyProjects() {
           observer.unobserve(currentRef);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.3 }
     );
 
     if (currentRef) {
@@ -67,11 +67,11 @@ function MyProjects() {
             <div key={index} className='slide-item' style={{ transform: `translateX(${index === currentSlide ? '0%' : `${(index - currentSlide) * 100}%`})` }}>
               <div className='project-description'>
                 <h2 translate='no'>{slide.title}</h2>
-                <span>{slide.technologies}</span>
-                <p>{slide.description}</p>
+                <span translate='no'>{slide.technologies}</span>
+                <p translate='yes'>{slide.description}</p>
                 <div className='project-btn-container'>
-                  <a className='project-btn' href={slide.liveLink} target='_blank' rel='noreferrer'>Live-View</a>
-                  <a className='project-btn' href={slide.githubLink} target='_blank' rel='noreferrer'>GitHub</a>
+                  <a translate='no' className='project-btn' href={slide.liveLink} target='_blank' rel='noreferrer'>Live-View</a>
+                  <a translate='no' className='project-btn' href={slide.githubLink} target='_blank' rel='noreferrer'>GitHub</a>
                 </div>
               </div>
               <img className='project-img' src={slide.image} alt={slide.title} style={{ display: 'unset' }} />

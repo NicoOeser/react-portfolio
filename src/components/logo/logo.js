@@ -13,7 +13,7 @@ function Logo() {
   }, []);
 
   return (
-    <div className="logo__container small-screen-present">
+    <div className="logo__container small-screen-present" translate='no'>
       <div className="logo-wrapper">
         <span className="logo-text">NO</span>
       </div>

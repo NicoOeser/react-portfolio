@@ -1,7 +1,7 @@
 @import "src/variables";
 
-.section-2:before,
-.section-2:after {
+.section-about-me:before,
+.section-about-me:after {
     content: "";
     position: absolute;
     left: 0;
@@ -10,13 +10,13 @@
     z-index: -10;
 }
 
-.section-2:before {
+.section-about-me:before {
     top: 0;
     bottom: 20%;
     clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 100%);
 }
 
-.section-2:after {
+.section-about-me:after {
     bottom: 0;
     top: 40%;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
@@ -51,10 +51,10 @@
     .me-img {
         position: absolute;
         transform: translate(-120px, -50px);
-        height: auto; 
+        height: auto;
         max-height: 300px;
         width: 300px;
-        object-fit: fill; 
+        object-fit: fill;
         box-shadow: $shadow;
         border-radius: 15px;
         z-index: 300;
@@ -65,11 +65,11 @@
     }
 
     .about-me-wrapper {
-        opacity: 0; 
-        transition: opacity 2s ease; 
+        opacity: 0;
+        transition: opacity 2s ease;
 
         &.fade-in {
-            opacity: 1; 
+            opacity: 1;
         }
     }
 }
@@ -85,29 +85,42 @@
     background-color: $lighterAccentColor;
     gap: 42px;
     transform: translate(clamp(80px, 10vw, 120px));
-}
 
-.about-me {
-    display: grid;
-    grid-template-columns: .1fr 1fr;
-    gap: 14px;
-}
+    .about-me {
+        display: grid;
+        grid-template-columns: .1fr 1fr;
+        gap: 14px;
 
-.about-me-text {
-    grid-column: 2 / -1;
-    display: flex;
-    gap: 14px;
-    flex-direction: column;
-}
+        .about-me-text {
+            grid-column: 2 / -1;
+            display: flex;
+            gap: 14px;
+            flex-direction: column;
 
-.about-me h2 {
-    font-size: 2rem;
-    font-weight: 400;
-    color: $aboutMeColor;
-}
+            h2 {
+                font-size: 2rem;
+                font-weight: 400;
+                color: $aboutMeColor;
+            }
 
-.about-me p {
-    color: $text-color-high-emphasis;
-    font-size: 1.2rem;
-    font-family: 'Overpass', sans-serif;
+            p {
+                color: $text-color-high-emphasis;
+                font-size: 1.2rem;
+                font-family: 'Overpass', sans-serif;
+            }
+
+            a {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                transition: all 0.1s ease;
+                color: #64ffda;
+
+                &:hover {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
 }
