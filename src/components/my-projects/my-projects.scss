@@ -14,12 +14,20 @@
     top: 0;
     bottom: 20%;
     clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 100%);
+
+    @media (max-width: 600px) {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
 }
 
 .section-projects:after {
     bottom: 0;
     top: 40%;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+
+    @media (max-width: 600px) {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
 }
 
 .section {
@@ -44,6 +52,16 @@
     &.reveal {
         opacity: 1;
         transform: unset;
+    }
+
+
+    @media (max-width: 950px) and (min-width: 600px) {
+        padding-left: 8vw;
+        padding-right: 8vw;
+    }
+
+    @media (max-width: 600px) {
+        padding: 46px 46px 180px !important;
     }
 
     .article-my-projects {
@@ -89,6 +107,11 @@
             stroke-width: inherit;
             fill: none;
             cursor: pointer;
+
+            @media (max-width: 600px) {
+                width: 32px;
+                height: 32px;
+            }
         }
     }
 
@@ -117,7 +140,7 @@
                 width: 475px;
                 height: fit-content;
                 border-radius: 15px;
-                background-color: $background-lighter-color;
+                background-color: $background-color-transparent;
                 box-shadow: $shadow;
                 z-index: 1;
                 font-size: 1rem;
@@ -125,18 +148,48 @@
                 left: 5%;
                 bottom: 20%;
 
+                @media (max-width: 950px) and (min-width: 600px) {
+                    width: 100%;
+                    bottom: 0;
+                    left: 0;
+                    box-shadow: none;
+                    background-color: $background-color-transparent;
+                    
+                }
+            
+                @media (max-width: 600px) {
+                    width: 100%;               
+                    bottom: 0;
+                    left: 0;
+                    box-shadow: none;
+                    background-color: $background-color-transparent;
+                    border-radius: 0px;
+                }
+
                 h2 {
                     font-size: 2rem;
                     font-weight: 800;
+
+                    @media (max-width: 600px) {
+                        font-size: 1.2rem;
+                    }
                 }
 
                 span {
                     font-size: 1.2rem;
                     color: $accent-color;
+
+                    @media (max-width: 600px) {
+                        font-size: 1rem;
+                    }
                 }
 
                 p {
                     font-size: 1rem;
+
+                    @media (max-width: 600px) {
+                        font-size: 0.8rem;
+                    }
                 }
 
                 .project-btn-container {
@@ -144,6 +197,14 @@
                     justify-content: space-between;
                     align-items: center;
                     margin-top: 12px;
+
+                    @media (max-width: 600px) {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+                        justify-content: center;
+                        align-items: center;
+                    }
 
                     .project-btn {
                         display: flex;
@@ -166,6 +227,10 @@
                           transform: scale(1.1); 
                           background-color: $accent-color-transparent;
                         }
+
+                        @media (max-width: 600px) {
+                            font-size: 0.8rem;
+                        }
                       }                     
                 }
             }
@@ -177,6 +242,18 @@
                 top: 10%;
                 width: 500px;
                 border-radius: 15px;
+
+                @media (max-width: 950px) and (min-width: 600px) {
+                    width: 100%;
+                    right: 0;
+                    border-radius: 0;
+                }
+            
+                @media (max-width: 600px) {
+                    width: 100%;
+                    right: 0;
+                    border-radius: 0;
+                }
             }
         }
     }
@@ -209,3 +286,13 @@
     grid-column: 3 / -1;
     grid-row: 1 / 2;
 }
+
+
+
+
+
+
+
+
+
+

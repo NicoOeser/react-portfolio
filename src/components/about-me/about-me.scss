@@ -14,12 +14,20 @@
     top: 0;
     bottom: 20%;
     clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 100%);
+
+    @media (max-width: 600px) {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
 }
 
 .section-about-me:after {
     bottom: 0;
     top: 40%;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+
+    @media (max-width: 600px) {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
 }
 
 .section {
@@ -44,7 +52,7 @@
         transform: unset;
     }
 
-    &-2 .me {
+    &-about-me .me {
         display: none;
     }
 
@@ -59,8 +67,8 @@
         border-radius: 15px;
         z-index: 300;
 
-        .section-2 & {
-            display: block;
+        .section-about-me & {
+            display: flex;
         }
     }
 
@@ -71,6 +79,15 @@
         &.fade-in {
             opacity: 1;
         }
+    }
+
+    @media (max-width: 950px) and (min-width: 600px) {
+        padding-left: 8vw;
+        padding-right: 8vw;
+    }
+
+    @media (max-width: 600px) {
+        padding: 46px 46px 180px !important;
     }
 }
 
@@ -122,5 +139,49 @@
                 }
             }
         }
+    }
+}
+
+
+@media (max-width: 950px) and (min-width: 600px) {
+
+    .section-about-me .about-me-wrapper {
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    .section-about-me .about-me-wrapper img {
+        position: static;
+        transform: translateY(42px);
+        align-self: center;
+    }
+
+    .section-about-me .about-me-wrapper article {
+        transform: none;
+        padding-top: 162px;
+    }
+}
+
+@media (max-width: 600px) {
+    .section-about-me .about-me-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+    }
+
+    .section-about-me .about-me-wrapper img {
+        align-self: start;
+        justify-self: center;
+        width: 200px;
+        border-radius: 50%;
+        transform: rotate(2deg) translateY(-50%);
+    }
+
+    .section-about-me .about-me-wrapper article {
+        display: flex;
+        transform: none;   
+        padding: 120px 24px 24px;
     }
 }

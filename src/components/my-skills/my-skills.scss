@@ -23,6 +23,18 @@
         transform: unset;
     }
 
+    @media (max-width: 950px) and (min-width: 600px) {
+        padding-left: 8vw;
+        padding-right: 8vw;
+        gap: 26px;
+    }
+
+    @media (max-width: 600px) {
+        padding-left: 46px !important;
+        padding-right: 46px !important;
+        gap: 26px;
+    }
+
     .article-skills {
         width: fit-content;
         align-self: center;
@@ -76,9 +88,16 @@
         transform: translateX(0);
     }
 
-    @media (max-width: 768px) {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    }
+    @media (max-width: 950px) and (min-width: 600px) {
+      
+            grid-template-columns: 18vw 18vw 18vw 18vw;
+            padding: 14px;
+        }
+
+        @media (max-width: 600px) {
+            grid-template-columns: 24vw 24vw 24vw;
+            gap: 0;
+        }
 }
 
 
@@ -96,6 +115,15 @@
     gap: 10px;
     z-index: 5;
     transition: all .3s ease-in-out;
+
+    @media (max-width: 950px) and (min-width: 600px) {
+        height: 18vw;
+    }
+
+    @media (max-width: 600px) {
+        height: 24vw;
+        gap: 10px;
+    }
 }
 
 .skills-crad:hover {
@@ -181,10 +209,25 @@
         height: auto;
         stroke-width: 1px;
     }
+
+    @media (max-width: 950px) and (min-width: 600px) {
+        width: 72px;
+        height: 72px;
+    }
+
+    @media (max-width: 600px) {
+        height: 10vw;
+        width: 10vw;
+    }
 }
 
 .skills-card-description h2 {
     font-size: 1rem;
     font-weight: inherit;
     transition: all .2s ease-out;
+
+    @media (max-width: 600px) {
+        font-size: 0.7rem;
+    }
 }
+

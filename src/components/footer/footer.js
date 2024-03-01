@@ -70,7 +70,7 @@ function Footer() {
       </div>
       <div className='copyright' translate='no'>
         <p className='copyright-text'>
-          © 2024 von Nicolas Oeser | Alle Rechte vorbehalten | {' '}
+          © 2024 by Nicolas Oeser | All rights reserved | {' '}
           <span onClick={toggleImprintOverlay} className="imprint-link">Imprint</span>
         </p>
       </div>
