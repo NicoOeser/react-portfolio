@@ -41,8 +41,10 @@ h1 {
 
 *::-webkit-scrollbar-thumb {
   background-color: #64ffda;
+  border-radius: 8px;
 }
 
 *::-webkit-scrollbar-corner {
   background-color: transparent;
+
 }

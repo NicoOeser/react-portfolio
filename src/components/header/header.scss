@@ -13,6 +13,10 @@
   overflow: hidden;
   background-color: $background-color-transparent;
 
+  @media (max-width: 950px) and (min-width: 600px) {
+    font-size: 16px;
+    font-weight: 700;
+}
 
   &-logo {
     justify-content: center;
@@ -27,6 +31,8 @@
       color: transparent;
       display: flex;
       align-items: center;
+
+
 
       &::before,
       &::after {
@@ -50,6 +56,14 @@
   .nav-links {
     flex: 1;
     margin-right: 200px;
+
+    @media (max-width: 950px) and (min-width: 600px) {
+      margin-right: 0px;
+  }
+
+  @media (max-width: 600px) {
+     display: none;
+  }
 
     ul {
       list-style-type: none;
@@ -156,6 +170,19 @@
         &:before {
           border-radius: 50%;
         }
+      }
+    }
+  }
+  .hamburger-menu {
+    display: none; 
+
+    @media (max-width: 600px) {
+      display: flex;
+      align-items: center;
+      margin-right: 10px; 
+
+      .icon {
+        font-size: 1.2rem; 
       }
     }
   }
