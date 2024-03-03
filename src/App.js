@@ -12,7 +12,7 @@ function App() {
     const timer = setTimeout(() => {
       setShowLogo(false);
       setShowHeader(true);
-      setShowContent(true); // Header anzeigen, wenn das Logo verschwunden ist
+      setShowContent(true); 
     }, 3000); 
     
     return () => clearTimeout(timer);

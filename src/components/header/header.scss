@@ -19,7 +19,7 @@
 }
 
   &-logo {
-    justify-content: center;
+    justify-content: flex-start;
     margin-right: 20px;
 
     &-text {
@@ -55,7 +55,7 @@
 
   .nav-links {
     flex: 1;
-    margin-right: 200px;
+    text-align: center;
 
     @media (max-width: 950px) and (min-width: 600px) {
       margin-right: 0px;
@@ -68,7 +68,7 @@
     ul {
       list-style-type: none;
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       gap: 16px;
 
       li {
@@ -107,71 +107,7 @@
     }
   }
 
-  .mode-switcher {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    .icon {
-      font-size: 1.2rem;
-    }
-
-    .switch {
-      position: relative;
-      display: inline-block;
-      width: 40px;
-      height: 20px;
-
-      input {
-        opacity: 0;
-        width: 0;
-        height: 0;
-      }
-
-      .slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        width: 40px;
-        height: 20px;
-        background-color: $slider-background-color;
-        transition: .4s;
-        border-radius: 20px;
-
-        &:before {
-          position: absolute;
-          content: "";
-          height: 16px;
-          width: 16px;
-          left: 2px;
-          bottom: 2px;
-          background-color: white;
-          border-radius: 50%;
-          transition: .4s;
-        }
-      }
-
-      input:checked + .slider {
-        background-color: $accent-color;
-      }
-
-      input:focus + .slider {
-        box-shadow: 0 0 1px $accent-color;
-      }
-
-      input:checked + .slider:before {
-        transform: translateX(20px);
-      }
-
-      .slider.round {
-        border-radius: 34px;
-
-        &:before {
-          border-radius: 50%;
-        }
-      }
-    }
+ 
   }
   .hamburger-menu {
     display: none; 
@@ -186,4 +122,4 @@
       }
     }
   }
-}
+

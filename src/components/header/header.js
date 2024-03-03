@@ -7,14 +7,9 @@ import burgerMenuListIcon from '../../assets/icons/burgermenu-list.svg';
 import burgerMenuXIcon from '../../assets/icons/burgermenu-x.svg';
 
 function Header() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [infoOverlayVisible, setInfoOverlayVisible] = useState(false);
   const [contactOverlayVisible, setContactOverlayVisible] = useState(false);
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
-
-  const handleModeToggle = () => {
-    setIsDarkMode(!isDarkMode);
-  };
 
   const toggleInfoOverlay = () => {
     setInfoOverlayVisible(!infoOverlayVisible);
@@ -46,13 +41,6 @@ function Header() {
           <li><a href="#contact" onClick={toggleInfoOverlay}>Contact Info</a></li>
         </ul>
       </nav>
-      <div className="mode-switcher">
-        {isDarkMode ? <span className="icon">🌞</span> : <span className="icon">🌜</span>}
-        <label className="switch">
-          <input type="checkbox" onChange={handleModeToggle} checked={isDarkMode} />
-          <span className="slider round"></span>
-        </label>
-      </div>
       <div className="hamburger-menu" onClick={toggleBurgerMenu}>
         <img className="icon" src={isBurgerMenuOpen ? burgerMenuXIcon : burgerMenuListIcon} alt="Hamburger Menu" />
       </div>
